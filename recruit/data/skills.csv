@@ -1,0 +1,45 @@
+name,domain,category,aliases
+Cascading Style Sheets,programming language,web,CSS
+Python,programming language,full stack,py
+Ruby,programming language,full stack,rb
+C#,programming language,full stack,
+C++,programming language,,
+PHP,programming language,full stack,
+Java,programming language,full stack,
+JavaScript,programming language,web,JS
+Hypertext Markup Language,markup language,web,HTML
+Django,framework,full stack,
+Ruby on Rails,framework,full stack,RoR
+React.js,framework,web,
+Angular.js,framework,web,
+.NET,framework,full stack,
+Spring,framework,full stack,
+Springboot,framework,full stack,
+SQL,databases,RDBMS,
+MongoDB,databases,NoSQL,
+Redis,databases,Cache,
+Cassandra,databases,NoSQL,
+MariaDB,databases,RDBMS,
+Amazon Web Services,cloud,,AWS
+Azure Cloud,cloud,,Azure
+Google Cloud Platform,cloud,,GCP
+Apache Spark,data,big data,Spark
+Apache Hadoop,cloud,big data,Spark
+Integration testing,testing,integration,
+Unit testing,testing,unit,
+System testing,testing,system,
+Linux,operating systems,,
+Unix,operating systems,,
+Windows,operating systems,,
+Mac,operating systems,,
+iOS,operating systems,,
+TextMate,editors,simple editors,
+Notepad++,editors,simple editors,
+Brackets,editors,simple editors,
+Atom,editors,simple editors,
+Visual Studio Code,editors,IDE,VS Code
+Sypder,editors,IDE,
+PyCharm,editors,IDE,
+Eclipse,editors,IDE, 
+NetBeans,editors,IDE,
+Visual Studio,editors,IDE,
