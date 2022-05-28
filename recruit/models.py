@@ -1,6 +1,16 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 from django.contrib.auth.models import User
+from django.contrib.contenttypes.fields import GenericForeignKey
+from django.contrib.contenttypes.models import ContentType
+from django.contrib.contenttypes.fields import GenericRelation
+
+
+class Pic(models.Model):
+    path = models.CharField(max_length=400)
+    object_id = models.PositiveIntegerField()
+    content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)
+    content_object = GenericForeignKey()
 
 
 class Country(models.Model):
@@ -28,6 +38,7 @@ class Company(models.Model):
     name = models.CharField(max_length=150)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     country = models.ForeignKey(Country, on_delete=models.CASCADE)
+    logo = GenericRelation(Pic)
 
     def __str__(self) -> str:
         return f"{self.name} ({self.country.name})"
