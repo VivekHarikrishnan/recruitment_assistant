@@ -32,8 +32,8 @@
                     {% for job in jobs %}
                     <tr>
                         <td>{{ job.title }}</td>
-                        <td>{{ job.primary_skills.all|skills_to_str }}</td>
-                        <td>{{ job.secondary_skills.all|skills_to_str }}</td>
+                        <td>{{ job.skills|primary_skills_str }}</td>
+                        <td>{{ job.skills|secondary_skills_str }}</td>
                         <td>{{ job.status }}</td>
                     </tr>
                     {% endfor %}
