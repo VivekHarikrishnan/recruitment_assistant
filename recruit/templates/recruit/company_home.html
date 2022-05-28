@@ -1,0 +1,53 @@
+{% extends 'recruit/base.html' %}
+{% load custom_tags %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>Recruitment Assistant</h2>
+    <div class="row mt-2">
+        <div class="col-12">
+
+            <div class="d-flex justify-content-between">
+                <div><b>{{ name }}</b> ({{ category }})</div>
+                <div><a href="{% url 'logout' %}">Log Out</a></div>
+            </div>
+        </div>
+
+        <div class="col-12">
+            <h4>Jobs posted</h4>
+        </div>
+        <div class="col-12">
+            <table class="table" id="jobs-list" data-filter-control="true" data-toggle="table"
+                data-show-search-clear-button="true">
+                <thead>
+                    <tr>
+                        <th data-field="title" data-filter-control="input">Job Title</th>
+                        <th data-field="primary_skills" data-filter-control="input">Primary Skills</th>
+                        <th data-field="secondary_skills" data-filter-control="input">Secondary Skills</th>
+                        <th data-field="status" data-filter-control="select">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for job in jobs %}
+                    <tr>
+                        <td>{{ job.title }}</td>
+                        <td>{{ job.primary_skills.all|skills_to_str }}</td>
+                        <td>{{ job.secondary_skills.all|skills_to_str }}</td>
+                        <td>{{ job.status }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+
+<style>
+    body {
+        margin: auto 10%;
+    }
+</style>
+{% endblock %}
