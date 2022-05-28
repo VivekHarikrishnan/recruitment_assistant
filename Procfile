@@ -1,0 +1,1 @@
+web: gunicorn recruitment_assistant.wsgi --log-file -
