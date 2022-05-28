@@ -1,5 +1,9 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+
 
 def index(request):
-    return HttpResponse("Welcome")
+    return render(request, "recruit/index.html")
+
+
+def home(request):
+    return render(request, "recruit/home.html")
