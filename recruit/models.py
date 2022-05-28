@@ -7,6 +7,9 @@ class Country(models.Model):
     name = models.CharField(max_length=75, unique=True)
     code = models.CharField(max_length=3, unique=True)
 
+    class Meta:
+        ordering = ['code']
+
     def __str__(self) -> str:
         return f"{self.name} ({self.code})"
 
