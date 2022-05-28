@@ -8,3 +8,5 @@ The app helps to identify potential matching profiles against a job for a recrui
 `heroku config:set DEBUG_COLLECTSTATIC=1`
 `heroku config:set DISABLE_COLLECTSTATIC=1`
 `git push heroku main`
+`heroku run python manage.py migrate`
+`heroku run python manage.py createsuperuser`
