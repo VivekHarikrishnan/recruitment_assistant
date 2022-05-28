@@ -1,5 +1,5 @@
 """
-ASGI config for recruitment_assisstant_dj project.
+ASGI config for recruitment_assistant_dj project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'recruitment_assisstant.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'recruitment_assistant.settings')
 
 application = get_asgi_application()
