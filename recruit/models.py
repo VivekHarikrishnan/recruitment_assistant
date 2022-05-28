@@ -1,3 +1,4 @@
+from tabnanny import verbose
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 from django.contrib.auth.models import User
@@ -19,6 +20,7 @@ class Country(models.Model):
 
     class Meta:
         ordering = ['code']
+        verbose_name_plural = "Countries"
 
     def __str__(self) -> str:
         return f"{self.name} ({self.code})"
@@ -39,6 +41,9 @@ class Company(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     country = models.ForeignKey(Country, on_delete=models.CASCADE)
     logo = GenericRelation(Pic)
+
+    class Meta:
+        verbose_name_plural = "Companies"
 
     def __str__(self) -> str:
         return f"{self.name} ({self.country.name})"
